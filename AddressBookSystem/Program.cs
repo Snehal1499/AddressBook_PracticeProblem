@@ -175,6 +175,24 @@ namespace AddressBookSystem
                                 Console.WriteLine("Email = " + addbook[15]);
                             }
                             break;
+                        case 4:
+                            Console.WriteLine("Enter First Name and Last Name of the person to delete his record");
+                            string fname1 = Convert.ToString(Console.ReadLine());
+                            string lname2 = Convert.ToString(Console.ReadLine());
+                            if ((a.FirstName == fname1) && (a.LastName == lname2))
+                            {
+                                addbook.RemoveRange(0, 7);
+
+                                Console.WriteLine("\n Record Deleted: \n");
+
+                            }
+                            else if ((a.FirstName2 == fname1) && (a.LastName2 == lname2))
+                            {
+                                addbook.RemoveRange(8, 15);
+                                Console.WriteLine("\n Record Deleted: \n");
+
+                            }
+                            break;
                     }
                     choice();
                 }
@@ -182,6 +200,8 @@ namespace AddressBookSystem
         }
     }
 }
+
+
 
 
 
